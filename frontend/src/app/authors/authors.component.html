@@ -1,0 +1,46 @@
+<div>
+    <h1> &nbsp;Donations</h1><hr>
+</div>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body" >
+            
+              <div *ngFor="let author of authors">
+            
+          
+            
+            <!--/stories-->
+            <div class="row" >    
+              <br>
+              <div class="col-md-10 col-sm-9">
+                <h2>{{author.name}}</h2>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <h4><span class="label label-default">{{author.book}}</span></h4><h4>
+                    <small style="font-family:courier,'new courier';" class="text-muted">{{author.genre}} 
+                      </small>
+                    </h4></div>
+                  <div class="col-xs-3"></div>
+                </div>
+                <br><br>
+        
+              </div>
+              <hr>
+            
+          </div>
+          <hr>
+        </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div>
+         <a routerLink="/" class="btn btn-primary pull-right btnNext">Home</a>                                                                      
+
+    </div>
+
+  </div>

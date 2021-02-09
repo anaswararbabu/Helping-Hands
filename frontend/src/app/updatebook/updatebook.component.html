@@ -1,0 +1,49 @@
+<div class="container">
+    <div [hidden]="submitted">
+      <h1>Updates!!!</h1>
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <div class="form-group">
+          <label for="name">Requirements</label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 [(ngModel)]="book.title" name="name"
+                 #name="ngModel">
+          <div [hidden]="name.valid || name.pristine"
+               class="alert alert-danger">
+             required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Specify Requirements</label>
+          <input type="text" class="form-control" id="author"
+                 required
+                 [(ngModel)]="book.author" name="author"
+                 #author="ngModel">
+          <div [hidden]="author.valid || author.pristine"
+               class="alert alert-danger">
+             required
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Immediate or not</label>
+          <input type="text" class="form-control" id="genre"
+                 required
+                 [(ngModel)]="book.genre" name="genre"
+                 #genre="ngModel">
+          <div [hidden]="genre.valid || genre.pristine"
+               class="alert alert-danger">
+            required
+          </div>
+        </div>
+
+        
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="doupdate()">Submit</button>
+        &nbsp;&nbsp;<button type="button" class="btn btn-outline-danger" (click)="newHero(); heroForm.reset()">Reset</button>
+
+  
+  
+     
+      </form>
+    </div>
